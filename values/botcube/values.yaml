@@ -1,0 +1,24 @@
+settings:
+  clusterName: practice
+communications:
+  'default-group':
+    discord:
+      enabled: true
+      token: '' # 토큰 입력
+      botID: '' # botID 입력
+      channels:
+        'default':
+          id: '' # channel id 입력
+executors:
+  k8s-default-tools:
+    botkube/kubectl:
+      displayName: "Kubectl"
+      enabled: true
+rbac:
+  groups:
+    'botkube-plugins-default':
+      create: true
+      rules:
+        - apiGroups: ["*"]
+          resources: ["*"]
+          verbs: ["*"]

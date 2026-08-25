@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: botkube
+  namespace: argo
+spec:
+  project: default
+  destination:
+    namespace: botkube
+    server: https://kubernetes.default.svc
+  sources:
+  - repoURL: https://charts.botkube.io
+    targetRevision: v1.14.0
+    chart: botkube
+    helm:
+      valueFiles:
+      - $values/values/botkube/values.yaml
+  - ref: values
+    repoURL: https://github.com/suhokym/gitops-practice.git
+    targetRevision: HEAD
