@@ -10,5 +10,5 @@ spec:
   project: default
   source:
     path: manifests/wordpress
-    repoURL: https://<GIT_HOST>/<YOUR_ACCOUNT>/fastcampus-cluster-gitops-practice.git
+    repoURL: https://github.com/suhokym/gitops-practice.git
     targetRevision: HEAD
