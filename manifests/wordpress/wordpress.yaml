@@ -52,7 +52,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: blog.193.123.161.87/.nip.io # 수정 필요
+  - host: blog.193.123.161.87.nip.io # 수정 필요
     http:
       paths:
       - path: /
