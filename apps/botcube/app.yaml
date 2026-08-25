@@ -14,7 +14,7 @@ spec:
     chart: botkube
     helm:
       valueFiles:
-      - $values/values/botkube/values.yaml
+      - $values/values/botcube/values.yaml
   - ref: values
     repoURL: https://github.com/suhokym/gitops-practice.git
     targetRevision: HEAD
